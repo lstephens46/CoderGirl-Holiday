@@ -11,10 +11,7 @@ namespace Test
         {
             object result = Program.DayReturning(DateTime.Today, (((int)DayOfWeek.Monday - (int)DateTime.Today.DayOfWeek + 7) % 7) + 1);
 
-            if (result is DayOfWeek)
-                Assert.Equal(DayOfWeek.Tuesday, result);
-            else
-                Assert.Equal("Tuesday", result);
+            Assert.Equal("Tuesday", result.ToString());
         }
     }
 }
