@@ -9,7 +9,9 @@ namespace Test
         [Fact]
         public void DayReturning_ReturnValue()
         {
-            Assert.Equal("Tuesday", Program.DayReturning(DateTime.Today, (((int)DayOfWeek.Monday - (int)DateTime.Today.DayOfWeek + 7) % 7) + 1));
+            object result = Program.DayReturning(DateTime.Today, (((int)DayOfWeek.Monday - (int)DateTime.Today.DayOfWeek + 7) % 7) + 1);
+
+            Assert.Equal("Tuesday", result.ToString());
         }
     }
 }
